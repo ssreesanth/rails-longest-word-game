@@ -1,0 +1,14 @@
+<samp><%= params[:word] %></samp>
+
+
+<%= link_to "Play Again", new_path %>
+
+<% if @included %>
+  <%if @is_valid %>
+    <%= "valid word" %>
+  <% else %>
+    <%= "invalid word" %>
+  <% end %>
+<% else %>
+  <%= "words must include valid letters" %>
+<% end %>
