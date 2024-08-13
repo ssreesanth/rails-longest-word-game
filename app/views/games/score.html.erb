@@ -1,14 +1,18 @@
-<samp><%= params[:word] %></samp>
 
 
-<%= link_to "Play Again", new_path %>
-
+<samp>You Typed --> <%= params[:word].capitalize %></samp>
+<div>
 <% if @included %>
   <%if @is_valid %>
-    <%= "valid word" %>
+    <%= "Nice one!! Valid word" %>
   <% else %>
-    <%= "invalid word" %>
+    <%= "Invalid word" %>
   <% end %>
 <% else %>
-  <%= "words must include valid letters" %>
+  <%= "Words must include valid letters" %>
 <% end %>
+</div>
+
+<div>
+  <%= link_to "Play Again", new_path %>
+</div>
